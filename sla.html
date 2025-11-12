@@ -8,60 +8,252 @@
     <title>Futurismo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* =========================
+           TEMA: FUTURISMO
+           ========================= */
+
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap');
+
+        :root {
+            --cor-primaria: #00fff7;
+            --cor-secundaria: #101820;
+            --cor-fundo: #0a0f14;
+            --cor-destaque: #ff00ff;
+            --cor-texto: #e0e0e0;
+            --cor-botao-hover: #00bcd4;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #050d14, #0f2c3f, #081b2b);
+            border-bottom: 2px solid var(--cor-primaria);
+            box-shadow: 0 0 20px var(--cor-primaria);
+        }
+
+        .nav-img {
+            width: 100px;
+            filter: drop-shadow(0 0 8px var(--cor-primaria));
+        }
+
+        .nav-link {
+            color: var(--cor-primaria);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--cor-destaque);
+            text-shadow: 0 0 10px var(--cor-destaque);
+        }
+
+        .menu-acessibilidade button {
+            background-color: transparent;
+            border: 2px solid var(--cor-primaria);
+            color: var(--cor-primaria);
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            transition: 0.3s;
+        }
+
+        .menu-acessibilidade button:hover {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            box-shadow: 0 0 10px var(--cor-primaria);
+        }
+
+        .inicio-fundo {
+            background: linear-gradient(135deg, rgba(0, 255, 247, 0.1), rgba(255, 0, 255, 0.05));
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 0 25px rgba(0, 255, 247, 0.2);
+        }
+
+        .botao-inicio {
+            background: var(--cor-primaria);
+            border: none;
+            color: var(--cor-secundaria);
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            transition: 0.3s;
+        }
+
+        .botao-inicio:hover {
+            background: var(--cor-destaque);
+            box-shadow: 0 0 20px var(--cor-destaque);
+            color: white;
+        }
+
+        .secao-tropicalia {
+            background: rgba(0, 255, 247, 0.05);
+            border-left: 3px solid var(--cor-primaria);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 0 20px rgba(0, 255, 247, 0.1);
+        }
+
+        .secao-tropicalia h2 {
+            color: var(--cor-primaria);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .fundo-galeria {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            box-shadow: inset 0 0 30px rgba(0, 255, 247, 0.1);
+            padding: 2rem;
+        }
+
+        .fundo-galeria img {
+            border: 2px solid var(--cor-primaria);
+            transition: 0.4s;
+            filter: brightness(0.9);
+        }
+
+        .fundo-galeria img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2) drop-shadow(0 0 20px var(--cor-destaque));
+        }
+
+        .formulario {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--cor-primaria);
+            box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
+            padding: 2rem;
+        }
+
+        .formulario label {
+            color: var(--cor-primaria);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--cor-primaria);
+            color: var(--cor-texto);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--cor-destaque);
+            box-shadow: 0 0 10px var(--cor-destaque);
+        }
+
+        .btn-primary {
+            background-color: var(--cor-primaria);
+            border: none;
+            color: var(--cor-secundaria);
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--cor-destaque);
+            color: white;
+            box-shadow: 0 0 15px var(--cor-destaque);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #050d14, #081b2b);
+            border-top: 2px solid var(--cor-primaria);
+            color: var(--cor-texto);
+            font-size: 0.9rem;
+        }
+
+        footer i {
+            color: var(--cor-primaria);
+            margin: 0 8px;
+            font-size: 1.3rem;
+            transition: 0.3s;
+        }
+
+        footer i:hover {
+            color: var(--cor-destaque);
+            text-shadow: 0 0 10px var(--cor-destaque);
+        }
+    </style>
 </head>
 
 <body>
-    <header class=" p-5">
-
+    <header class="p-5">
         <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" alt="Logotipo do Futurismo" class="nav-img " loading="lazy">
+            <img src="img/logo-futurismo.png" class="nav-img" loading="lazy" alt="Logo do Futurismo">
             <ul class="nav mt-5">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>          
+            </ul>
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+                    <button id="aumentar-fonte" class="btn btn-primary fw-bold">A+</button>
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold">A-</button>
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold"><i class="bi bi-shadows"></i></button>
+                </div>
+            </div>
         </nav>
-       
     </header>
 
-
     <main class="container my-5">
-
         <section id="inicio" class="my-5">
             <div class="inicio-fundo d-flex justify-content-between align-items-center">
                 <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Bem-vindo ao</h1>
-                    <img src="img/logo-2.png" alt="Logotipo secundário do Futurismo" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#futurismo"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Explore o Futuro!</a>
+                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas ao</h1>
+                    <img src="img/logo-futurismo2.png" class="mb-3" width="563" height="278" loading="lazy" alt="Logo Futurismo tipografia moderna">
+                    <a href="#futurismo" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
                 </div>
-
+                <img src="img/futurismo-exposicao.png" alt="Imagem representando arte futurista com formas geométricas e movimento" title="Arte Futurista" class="img-fluid img-inicio">
             </div>
         </section>
 
-        <section id="futurismo" class="my-5 pt-6 secao-futurismo">
-            <div class="container d-flex align-items-center ">
-                  <div class="col-5">
-                    <h2>O que é o Futurismo?</h2>
-                    <p class="p-2">O Futurismo foi um movimento artístico e cultural que surgiu no início do século XX, focado em celebrar a tecnologia, a velocidade e a inovação. Ele buscava romper com o passado e projetar uma visão otimista e dinâmica do futuro, influenciando música, artes visuais, literatura e arquitetura.</p>
+        <section id="futurismo" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre o Futurismo">
+            <div class="container d-flex align-items-center">
+                <div class="col-4 d-flex justify-content-center">
+                    <img src="img/futurismo-artista.png" class="rounded-pill" width="273" height="331" loading="lazy" alt="Retrato estilizado de Filippo Tommaso Marinetti">
+                </div>
+                <div class="col-5">
+                    <h2>O que foi o Futurismo?</h2>
+                    <p class="p-2">
+                        O Futurismo foi um movimento artístico e literário surgido no início do século XX, na Itália,
+                        liderado por Filippo Tommaso Marinetti. Inspirado pela velocidade, tecnologia e inovação, o movimento exaltava
+                        as máquinas, as cidades modernas e o dinamismo do mundo industrial. As obras futuristas buscavam romper com o passado e representar o movimento, a energia e o progresso — marcas de uma era voltada para o futuro. <br>
+                        <em>Fonte: Enciclopédia Itaú Cultural</em>
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="galeria">
-            <h2 class="text-center pt-5">Galeria Futurista</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
+        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens futuristas">
+            <h2 class="text-center pt-5">Galeria</h2>
+            <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
-                        <img src="img/futurismo1.jpg"
-                            class="img-fluid rounded-5" loading="lazy" alt="Imagem Futurista 1">
+                        <img src="img/umberto-boccioni-dinamismo-de-um-ciclista.jpg" class="img-fluid rounded-5" loading="lazy" alt="Obra Dinamismo de um Ciclista - Umberto Boccioni">
                     </div>
                     <div class="col-md-4">
-                        <img src="img/futurismo2.jpg" class="img-fluid rounded-5"
-                            loading="lazy" alt="Imagem Futurista 2">
+                        <img src="img/giacomo-balla-velocidade-luz.jpg" class="img-fluid rounded-5" loading="lazy" alt="Obra Velocidade da Luz - Giacomo Balla">
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-md-center">
+                    <div class="col-md-4">
+                        <img src="img/futurismo-cidade-industrial.jpg" class="img-fluid rounded-5" loading="lazy" alt="Representação de cidade industrial futurista">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/marinetti-manifesto.jpg" class="img-fluid rounded-5" loading="lazy" alt="Imagem de Marinetti e o Manifesto Futurista">
                     </div>
                 </div>
             </div>
@@ -69,42 +261,40 @@
 
         <section id="contato">
             <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Fale conosco</h2>
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
+                    <h2 class="mb-3">Entre em contato</h2>
                     <form>
                         <div class="form-group mb-3">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
                         </div>
                         <div class="form-group mb-3">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">Enviar
-                                mensagem</button>
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="text-center p-3 fst-italic">
-        <p>Siga nossas redes futuristas:</p>
+        <p>Acesse nossas redes:</p>
         <i class="bi bi-whatsapp"></i>
         <i class="bi bi-instagram"></i>
         <i class="bi bi-tiktok"></i>
         <p class="mt-3">Desenvolvido por Pedro Henrique. Projeto fictício sem fins comerciais.</p>
     </footer>
-    <script src="script.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
