@@ -1,189 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Futurismo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
     <style>
-        /* =========================
-           TEMA: FUTURISMO
-           ========================= */
-
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap');
-
-        :root {
-            --cor-primaria: #00fff7;
-            --cor-secundaria: #101820;
-            --cor-fundo: #0a0f14;
-            --cor-destaque: #ff00ff;
-            --cor-texto: #e0e0e0;
-            --cor-botao-hover: #00bcd4;
-        }
+        /* ======== ESTILO FUTURISTA ======== */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
 
         body {
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(180deg, #050505 0%, #0d1b2a 100%);
+            color: #d4f1f9;
+            transition: all 0.3s ease;
         }
 
         header {
-            background: linear-gradient(90deg, #050d14, #0f2c3f, #081b2b);
-            border-bottom: 2px solid var(--cor-primaria);
-            box-shadow: 0 0 20px var(--cor-primaria);
-        }
-
-        .nav-img {
-            width: 100px;
-            filter: drop-shadow(0 0 8px var(--cor-primaria));
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #00fff5;
         }
 
         .nav-link {
-            color: var(--cor-primaria);
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 600;
+            color: #00fff5 !important;
+            font-weight: bold;
             text-transform: uppercase;
             transition: 0.3s;
         }
 
         .nav-link:hover {
-            color: var(--cor-destaque);
-            text-shadow: 0 0 10px var(--cor-destaque);
+            color: #03dac6 !important;
+            text-shadow: 0 0 10px #03dac6;
         }
 
-        .menu-acessibilidade button {
-            background-color: transparent;
-            border: 2px solid var(--cor-primaria);
-            color: var(--cor-primaria);
-            text-transform: uppercase;
-            font-family: 'Orbitron', sans-serif;
-            transition: 0.3s;
+        #botao-acessibilidade {
+            background: #00fff5;
+            border: none;
+            color: #000;
         }
 
-        .menu-acessibilidade button:hover {
-            background-color: var(--cor-primaria);
-            color: var(--cor-secundaria);
-            box-shadow: 0 0 10px var(--cor-primaria);
+        #opcoes-acessibilidade button {
+            margin-top: 5px;
+            background: #00fff5;
+            border: none;
+            color: #000;
         }
 
         .inicio-fundo {
-            background: linear-gradient(135deg, rgba(0, 255, 247, 0.1), rgba(255, 0, 255, 0.05));
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 0 25px rgba(0, 255, 247, 0.2);
+            background: url('https://cdn.pixabay.com/photo/2017/01/31/21/22/futuristic-2029943_1280.jpg') no-repeat center/cover;
+            border-radius: 25px;
+            padding: 60px;
+            box-shadow: 0 0 30px #00fff5;
         }
 
         .botao-inicio {
-            background: var(--cor-primaria);
+            background-color: #00fff5;
             border: none;
-            color: var(--cor-secundaria);
-            text-transform: uppercase;
-            font-family: 'Orbitron', sans-serif;
-            transition: 0.3s;
+            color: #000;
         }
 
-        .botao-inicio:hover {
-            background: var(--cor-destaque);
-            box-shadow: 0 0 20px var(--cor-destaque);
-            color: white;
-        }
-
-        .secao-tropicalia {
-            background: rgba(0, 255, 247, 0.05);
-            border-left: 3px solid var(--cor-primaria);
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 0 20px rgba(0, 255, 247, 0.1);
-        }
-
-        .secao-tropicalia h2 {
-            color: var(--cor-primaria);
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
+        .secao-tropicalia img {
+            border: 3px solid #00fff5;
         }
 
         .fundo-galeria {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 15px;
-            box-shadow: inset 0 0 30px rgba(0, 255, 247, 0.1);
-            padding: 2rem;
-        }
-
-        .fundo-galeria img {
-            border: 2px solid var(--cor-primaria);
-            transition: 0.4s;
-            filter: brightness(0.9);
-        }
-
-        .fundo-galeria img:hover {
-            transform: scale(1.05);
-            filter: brightness(1.2) drop-shadow(0 0 20px var(--cor-destaque));
+            background-color: rgba(0, 255, 245, 0.05);
+            border: 2px solid #00fff5;
+            border-radius: 20px;
         }
 
         .formulario {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid var(--cor-primaria);
-            box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
-            padding: 2rem;
-        }
-
-        .formulario label {
-            color: var(--cor-primaria);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .form-control {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--cor-primaria);
-            color: var(--cor-texto);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--cor-destaque);
-            box-shadow: 0 0 10px var(--cor-destaque);
-        }
-
-        .btn-primary {
-            background-color: var(--cor-primaria);
-            border: none;
-            color: var(--cor-secundaria);
-            text-transform: uppercase;
-            font-family: 'Orbitron', sans-serif;
-            transition: 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--cor-destaque);
-            color: white;
-            box-shadow: 0 0 15px var(--cor-destaque);
+            background-color: rgba(0, 255, 245, 0.08);
+            padding: 20px;
+            border: 2px solid #00fff5;
         }
 
         footer {
-            background: linear-gradient(90deg, #050d14, #081b2b);
-            border-top: 2px solid var(--cor-primaria);
-            color: var(--cor-texto);
-            font-size: 0.9rem;
+            border-top: 2px solid #00fff5;
+            color: #00fff5;
+            background-color: #0a192f;
         }
 
-        footer i {
-            color: var(--cor-primaria);
-            margin: 0 8px;
-            font-size: 1.3rem;
-            transition: 0.3s;
+        /* ======== CONTRASTE ALTO ======== */
+        .alto-contraste {
+            background: #ffffff !important;
+            color: #000000 !important;
         }
 
-        footer i:hover {
-            color: var(--cor-destaque);
-            text-shadow: 0 0 10px var(--cor-destaque);
+        .alto-contraste header,
+        .alto-contraste footer {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        .alto-contraste a,
+        .alto-contraste h1,
+        .alto-contraste h2 {
+            color: #000000 !important;
         }
     </style>
 </head>
@@ -191,18 +106,19 @@
 <body>
     <header class="p-5">
         <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo-futurismo.png" class="nav-img" loading="lazy" alt="Logo do Futurismo">
+            <img src="https://cdn-icons-png.flaticon.com/512/6134/6134077.png" class="nav-img" width="80" alt="Símbolo futurista">
             <ul class="nav mt-5">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
+
             <div id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold"><i class="bi bi-shadows"></i></button>
+                <button id="botao-acessibilidade" class="btn fw-bold" aria-expanded="false">Acessibilidade</button>
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade d-none">
+                    <button id="aumentar-fonte" class="btn fw-bold">A+</button>
+                    <button id="diminuir-fonte" class="btn fw-bold">A-</button>
+                    <button id="alterna-contraste" class="btn fw-bold"><i class="bi bi-shadows"></i></button>
                 </div>
             </div>
         </nav>
@@ -210,50 +126,50 @@
 
     <main class="container my-5">
         <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
+            <div class="inicio-fundo d-flex justify-content-between align-items-center text-white">
                 <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas ao</h1>
-                    <img src="img/logo-futurismo2.png" class="mb-3" width="563" height="278" loading="lazy" alt="Logo Futurismo tipografia moderna">
-                    <a href="#futurismo" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
+                    <h1 class="display-4 fw-bold">Bem-vindo ao Futuro</h1>
+                    <img src="https://cdn-icons-png.flaticon.com/512/4280/4280870.png" width="300" height="278" class="mb-3" alt="Logo futurista">
+                    <a href="#futurismo" class="btn btn-primary btn-lg botao-inicio fw-semibold">Explorar Agora</a>
                 </div>
-                <img src="img/futurismo-exposicao.png" alt="Imagem representando arte futurista com formas geométricas e movimento" title="Arte Futurista" class="img-fluid img-inicio">
+                <img src="https://cdn.pixabay.com/photo/2020/03/03/07/16/cyberpunk-4894471_1280.jpg" alt="Cidade futurista com luzes neon" class="img-fluid img-inicio rounded-4" width="450">
             </div>
         </section>
 
-        <section id="futurismo" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre o Futurismo">
+        <section id="futurismo" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre o futurismo">
             <div class="container d-flex align-items-center">
                 <div class="col-4 d-flex justify-content-center">
-                    <img src="img/futurismo-artista.png" class="rounded-pill" width="273" height="331" loading="lazy" alt="Retrato estilizado de Filippo Tommaso Marinetti">
+                    <img src="https://cdn.pixabay.com/photo/2021/03/03/15/17/futuristic-6066915_1280.jpg" class="rounded-pill" width="273" height="331" alt="Imagem abstrata futurista">
                 </div>
                 <div class="col-5">
-                    <h2>O que foi o Futurismo?</h2>
+                    <h2>O que é o Futurismo?</h2>
                     <p class="p-2">
-                        O Futurismo foi um movimento artístico e literário surgido no início do século XX, na Itália,
-                        liderado por Filippo Tommaso Marinetti. Inspirado pela velocidade, tecnologia e inovação, o movimento exaltava
-                        as máquinas, as cidades modernas e o dinamismo do mundo industrial. As obras futuristas buscavam romper com o passado e representar o movimento, a energia e o progresso — marcas de uma era voltada para o futuro. <br>
-                        <em>Fonte: Enciclopédia Itaú Cultural</em>
+                        O Futurismo foi um movimento artístico e cultural nascido no início do século XX, que exaltava a tecnologia,
+                        a velocidade, as máquinas e o progresso. Defendia a ruptura com o passado e a celebração do novo,
+                        refletindo o entusiasmo pela modernidade e pela energia das cidades industriais.
+                        Seus reflexos ainda estão presentes no design, arquitetura, literatura e artes visuais do mundo atual.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens futuristas">
-            <h2 class="text-center pt-5">Galeria</h2>
+        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
+            <h2 class="text-center pt-5">Galeria Futurista</h2>
             <div class="container p-3 mt-3 fundo-galeria">
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
-                        <img src="img/umberto-boccioni-dinamismo-de-um-ciclista.jpg" class="img-fluid rounded-5" loading="lazy" alt="Obra Dinamismo de um Ciclista - Umberto Boccioni">
+                        <img src="https://cdn.pixabay.com/photo/2017/06/10/07/18/future-2389636_1280.jpg" class="img-fluid rounded-5" loading="lazy">
                     </div>
                     <div class="col-md-4">
-                        <img src="img/giacomo-balla-velocidade-luz.jpg" class="img-fluid rounded-5" loading="lazy" alt="Obra Velocidade da Luz - Giacomo Balla">
+                        <img src="https://cdn.pixabay.com/photo/2021/02/11/06/11/ai-6002348_1280.jpg" class="img-fluid rounded-5" loading="lazy">
                     </div>
                 </div>
                 <div class="row mt-4 justify-content-md-center">
                     <div class="col-md-4">
-                        <img src="img/futurismo-cidade-industrial.jpg" class="img-fluid rounded-5" loading="lazy" alt="Representação de cidade industrial futurista">
+                        <img src="https://cdn.pixabay.com/photo/2022/03/29/15/19/futuristic-7099927_1280.jpg" class="img-fluid rounded-5" loading="lazy">
                     </div>
                     <div class="col-md-4">
-                        <img src="img/marinetti-manifesto.jpg" class="img-fluid rounded-5" loading="lazy" alt="Imagem de Marinetti e o Manifesto Futurista">
+                        <img src="https://cdn.pixabay.com/photo/2020/12/12/11/49/robot-5823776_1280.jpg" class="img-fluid rounded-5" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -293,8 +209,35 @@
         <p class="mt-3">Desenvolvido por Pedro Henrique. Projeto fictício sem fins comerciais.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
-</body>
+    <!-- ======== SCRIPT DE ACESSIBILIDADE ======== -->
+    <script>
+        const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
+        const opcoesAcessibilidade = document.getElementById('opcoes-acessibilidade');
+        const aumentarFonte = document.getElementById('aumentar-fonte');
+        const diminuirFonte = document.getElementById('diminuir-fonte');
+        const alternaContraste = document.getElementById('alterna-contraste');
 
+        let tamanhoFonte = 100;
+
+        botaoAcessibilidade.addEventListener('click', () => {
+            opcoesAcessibilidade.classList.toggle('d-none');
+        });
+
+        aumentarFonte.addEventListener('click', () => {
+            tamanhoFonte += 10;
+            document.body.style.fontSize = tamanhoFonte + '%';
+        });
+
+        diminuirFonte.addEventListener('click', () => {
+            if (tamanhoFonte > 50) {
+                tamanhoFonte -= 10;
+                document.body.style.fontSize = tamanhoFonte + '%';
+            }
+        });
+
+        alternaContraste.addEventListener('click', () => {
+            document.body.classList.toggle('alto-contraste');
+        });
+    </script>
+</body>
 </html>
